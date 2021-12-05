@@ -68,7 +68,7 @@ export default class DataManager {
     this.data = data.map((row, index) => {
       const prevTableData = prevDataObject[row.id] || {};
       const tableData = {
-        id: row.id || index,
+        id: index,
         // `uuid` acts as our 'key' and is generated when new data
         // is passed into material-table externally.
         uuid: row.uuid || uuid.v4(),
